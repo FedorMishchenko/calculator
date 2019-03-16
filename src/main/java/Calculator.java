@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class Calculator {
     private Scanner scanner = new Scanner(System.in);
-    private HashMap<String, Operation<Double>> map;
-    private Operation<Double> operation;
+    private HashMap<String, Operation<Float>> map;
+    private Operation<Float> operation;
 
     private void init(){
         map = new HashMap<>();
@@ -24,10 +24,10 @@ public class Calculator {
             System.out.println("Enter operation");
             String command = scanner.nextLine();
             operation = map.get(command);
-            System.out.println("Enter first number");
-            Double x = scanner.nextDouble();
-            System.out.println("Enter second number");
-            Double y = scanner.nextDouble();
+            System.out.println("Enter first parameter");
+            Float x = scanner.nextFloat();
+            System.out.println("Enter second parameter");
+            Float y = scanner.nextFloat();
             System.out.println(operation.calculate(x, y));
 
     }

@@ -1,8 +1,8 @@
 package operations;
 
-public class Addition implements Operation<Double> {
+public class Addition implements Operation<Float> {
     @Override
-    public Double calculate(Double x, Double y) {
+    public Float calculate(Float x, Float y) {
         return x + y;
     }
 }
